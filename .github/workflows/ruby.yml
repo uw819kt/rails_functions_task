@@ -21,6 +21,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: install/imagemagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
       - name: Set up Ruby and Bundler
         uses: ruby/setup-ruby@v1
         with:
